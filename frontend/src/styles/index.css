@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-50 to-blue-50 font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-lg border border-gray-200 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-all duration-200;
+  }
+  
+  .time-slot {
+    @apply bg-white hover:bg-primary hover:text-white border border-gray-200 hover:border-primary rounded-lg p-3 text-center cursor-pointer transition-all duration-200 font-medium;
+  }
+  
+  .time-slot.selected {
+    @apply bg-primary text-white border-primary;
+  }
+  
+  .time-slot.booked {
+    @apply bg-gray-100 text-gray-400 cursor-not-allowed hover:bg-gray-100 hover:text-gray-400 hover:border-gray-200;
+  }
+}
