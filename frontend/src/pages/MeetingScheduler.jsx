@@ -15,7 +15,7 @@ export default function MeetingScheduler() {
 
   // Capturar información del usuario al cargar la página
   useEffect(() => {
-    // logUserInfo(); // Temporalmente deshabilitado
+    logUserInfo(); // Captura automática al entrar
   }, []);
 
   const handleDateSelect = (date) => {
